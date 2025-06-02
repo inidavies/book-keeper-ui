@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+<h1>Book Keeper</h1>
+
+<div>
+    <form method="get" id="searchform">
+        <input class="search_item" id="searchbar" name="searchbar" type="text" placeholder="Add using ISBN or Search by Any">
+        <input class="search_item" type="button" value="Add" onclick="addBook()">
+        <input class="search_item" type="button" value="Search">
+        <label class="search_item switch">
+            <input id="scanmode" name="scanmode" type="checkbox">scanner mode
+        </label>
+    </form>
+</div>
+<div id="booklist">
+
+</div>
+
+<script src="./script/script.js"></script>
+</body>
+</html>

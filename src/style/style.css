@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#booklist{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-content: flex-start;
+}
+.book-item{
+    width: 20%;
+    margin: 10px;
+}
+#searchform{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#searchbar{
+    width: 60%;
+}
+.switch{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 200px;
+}
+.search_item{
+    margin: 10px;
+}
