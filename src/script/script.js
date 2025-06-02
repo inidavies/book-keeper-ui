@@ -35,7 +35,7 @@ function getAllBooks(){
 // handle form submit actions
 function addBook(){
     const isbnElement = document.getElementById("searchbar");
-    const isbn = isbnElement.value;
+    const isbn = isbnElement.value.trim();
 
     const booklist = document.getElementById("booklist");
     booklist.innerHTML = "";
