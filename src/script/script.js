@@ -97,4 +97,20 @@ function createBook(book){
     // add book item to booklist
     booklist.appendChild(bookItem);
 }
+
+const scanner_mode = document.getElementById("scanner_mode");
+const searchbar = document.getElementById("searchbar");
+searchbar.addEventListener("input", (event) => {
+    console.log(scanner_mode.checked);
+    if (scanner_mode.checked) {
+        const isbn = event.target.value.trim();
+        // add if isbn is not empty
+        if (isbn.length > 0) {
+            addBook();
+        }
+    }
+})
+
 getAllBooks();
+
+
