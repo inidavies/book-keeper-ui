@@ -10,14 +10,21 @@
     <script type="module" src="https://ka-f.webawesome.com/webawesome@3.5.0/webawesome.loader.js"></script>
     <title></title>
 </head>
-<body>
-<div id="header" class="inter-header">
+<body class="inter-header">
+<div id="header" >
     <h1>Book Keeper</h1>
 
-    <label id="mode-switch">
+<!--    <label id="mode-switch">
         <input type="checkbox">
         <wa-icon name="toggle-on"></wa-icon>
-    </label>
+    </label>-->
+    <div id="mode-switch">
+        <label class="switch">
+            <input onclick="darkMode()" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <p id="mode-desc"> light mode</p>
+    </div>
 </div>
 
 
@@ -27,8 +34,9 @@
             <input class="search_item" id="searchbar" name="searchbar" type="text" placeholder="Add using ISBN or Search by Any">
             <input class="search_item" type="button" value="Add" onclick="addBook()">
             <input class="search_item" type="button" value="Search">
-            <label class="search_item switch">
-                <input id="scanner_mode" name="scanner_mode" type="checkbox">scanner mode
+            <label class="search_btn search_item switch">
+                <input onclick="scannerMode()" type="checkbox">
+                <span class="slider round"></span>
             </label>
         </form>
     </div>

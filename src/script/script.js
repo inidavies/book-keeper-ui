@@ -32,6 +32,22 @@ function getAllBooks(){
     })
 }
 
+function darkMode(){
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+
+    const modeSwitch = document.getElementById("mode-desc");
+    var modeText = modeSwitch.textContent;
+    if (modeText.includes("light mode")){
+        modeSwitch.textContent = "dark mode";
+    }else{
+        modeSwitch.textContent = "light mode";
+    }
+
+
+
+}
+
 // handle form submit actions
 function addBook(){
     const isbnElement = document.getElementById("searchbar");
@@ -82,6 +98,7 @@ function createBook(book){
     // book cover
     const bookCover = document.createElement("img");
     bookCover.src = bookData.coverLinks["medium"];
+    bookCover.classList.add("book-cover");
     bookItem.appendChild(bookCover);
 
     // book info div
@@ -91,11 +108,13 @@ function createBook(book){
     // book title
     const bookTitle = document.createElement("h4");
     bookTitle.innerHTML = bookData.title;
+    bookTitle.classList.add("book-title");
     bookInfo.appendChild(bookTitle);
 
     // book authors
     const bookAuthors = document.createElement("p");
     bookAuthors.innerHTML = bookData.authors;
+    bookAuthors.classList.add("book-authors");
     bookInfo.appendChild(bookAuthors);
 
     // add bookInfo to bookItem
