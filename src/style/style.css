@@ -1,31 +1,44 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
+.inter-header {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
 }
-#booklist{
-    width: 100%;
-    overflow: hidden;
+#header{
+    /*color: red;
+    font-weight: 100;*/
+    /*background-color:pink;*/
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    align-content: flex-start;
+    width: 100%;
 }
-.book-item{
-    width: 20%;
-    margin: 10px;
+input[type=checkbox] {
+  display: none;
+}
+#mode-switch{
+    padding-top: 24px;
+    height: auto;
+    font-size: 20px;
+}
+body{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 24px;
+}
+#main-page{
+    display: flex;
+    justify-content: space=between;
+    gap: 20px;
 }
 #searchform{
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: block;
     align-items: center;
 }
 #searchbar{
-    width: 60%;
+    width: 100%;
 }
 .switch{
     margin-left: 10px;
@@ -34,4 +47,20 @@ body{
 }
 .search_item{
     margin: 10px;
+}
+#booklist{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 32px;
+    align-content: flex-start;
+    col: 2;
+}
+.book-item{
+    flex: 50%
+}
+.book-item h3{
+
 }

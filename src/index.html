@@ -1,25 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.5.0/styles/webawesome.css">
+    <script type="module" src="https://ka-f.webawesome.com/webawesome@3.5.0/webawesome.loader.js"></script>
+    <title></title>
 </head>
 <body>
+<div id="header" class="inter-header">
+    <h1>Book Keeper</h1>
 
-<h1>Book Keeper</h1>
-
-<div>
-    <form method="get" id="searchform">
-        <input class="search_item" id="searchbar" name="searchbar" type="text" placeholder="Add using ISBN or Search by Any">
-        <input class="search_item" type="button" value="Add" onclick="addBook()">
-        <input class="search_item" type="button" value="Search">
-        <label class="search_item switch">
-            <input id="scanner_mode" name="scanner_mode" type="checkbox">scanner mode
-        </label>
-    </form>
+    <label id="mode-switch">
+        <input type="checkbox">
+        <wa-icon name="toggle-on"></wa-icon>
+    </label>
 </div>
-<div id="booklist">
 
+
+<div id="main-page">
+    <div>
+        <form method="get" id="searchform">
+            <input class="search_item" id="searchbar" name="searchbar" type="text" placeholder="Add using ISBN or Search by Any">
+            <input class="search_item" type="button" value="Add" onclick="addBook()">
+            <input class="search_item" type="button" value="Search">
+            <label class="search_item switch">
+                <input id="scanner_mode" name="scanner_mode" type="checkbox">scanner mode
+            </label>
+        </form>
+    </div>
+    <div id="booklist">
+
+    </div>
 </div>
 
 <script src="./script/script.js"></script>

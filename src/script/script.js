@@ -80,7 +80,7 @@ function createBook(book){
     bookItem.classList.add("book-item");
 
     // book title
-    const bookTitle = document.createElement("h3");
+    const bookTitle = document.createElement("h4");
     bookTitle.innerHTML = bookData.title;
     bookItem.appendChild(bookTitle);
 
