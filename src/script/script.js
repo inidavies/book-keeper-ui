@@ -79,20 +79,27 @@ function createBook(book){
     const bookItem = document.createElement("div");
     bookItem.classList.add("book-item");
 
-    // book title
-    const bookTitle = document.createElement("h4");
-    bookTitle.innerHTML = bookData.title;
-    bookItem.appendChild(bookTitle);
-
-    // book authors
-    const bookAuthors = document.createElement("p");
-    bookAuthors.innerHTML = bookData.authors;
-    bookItem.appendChild(bookAuthors);
-
     // book cover
     const bookCover = document.createElement("img");
     bookCover.src = bookData.coverLinks["medium"];
     bookItem.appendChild(bookCover);
+
+    // book info div
+    const bookInfo = document.createElement("div");
+    bookInfo.classList.add("book-info");
+
+    // book title
+    const bookTitle = document.createElement("h4");
+    bookTitle.innerHTML = bookData.title;
+    bookInfo.appendChild(bookTitle);
+
+    // book authors
+    const bookAuthors = document.createElement("p");
+    bookAuthors.innerHTML = bookData.authors;
+    bookInfo.appendChild(bookAuthors);
+
+    // add bookInfo to bookItem
+    bookItem.appendChild(bookInfo)
 
     // add book item to booklist
     booklist.appendChild(bookItem);

@@ -59,8 +59,12 @@ body{
     col: 2;
 }
 .book-item{
-    flex: 50%
+    flex: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 100px;
 }
-.book-item h3{
-
+.book-info{
+    display: block;
+    margin: 12px 24px;
 }
